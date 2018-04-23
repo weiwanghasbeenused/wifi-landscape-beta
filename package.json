@@ -2,8 +2,12 @@
   "name": "wifi-landscape-beta",
   "version": "1.0.0",
   "description": "wifi-landscape-beta",
+  "engines": {
+    "node": "8.10.0"
+  },
   "main": "index.js",
   "scripts": {
+    "start": "index.js",
     "test": "test.js"
   },
   "repository": {
@@ -22,6 +26,8 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "git": "^0.1.5",
+    "njs": "0.0.2",
     "node-wifi": "^2.0.4"
   }
 }

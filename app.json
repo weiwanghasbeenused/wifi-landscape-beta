@@ -1,0 +1,8 @@
+{
+  "name": "wifi-landscape-beta",
+  "description": "wifi-landscape-beta",
+  "repository": "https://github.com/weiwanghasbeenused/wifi-landscape-beta",
+  "logo": "",
+  "keywords": ["node", "express", "heroku"],
+  "image": ""
+}
