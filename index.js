@@ -22,13 +22,19 @@ wifi.scan(function(err, networks){
 }
 });
 
-app.get('/getwifis', function (req, res) {
+app.ajax('/getwifis', function (req, res) {
    res.json(parsedNetworks);
    // res.render('pagetest.html', {pn: parsedNetworks});
-})
+});
+/*$.ajax({
+  		url: "https://damp-peak-37835.herokuapp.com/getwifis",
+  		dataType: "jsonp",
+  		success: function (data) {
+    	console.log(data)
+  		}
+	});
 
-
-/*var server = app.listen(8081, function () {
+   var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port
    
