@@ -3,17 +3,9 @@ var app = express();
 var wifi = require('node-wifi');
 var parsedNetworks;
 var cors = require('cors');
-const path = require('path')
-const PORT = process.env.PORT || 5000
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
-app.use(cors())
-
+app.use(cors());
+app.listen(process.env.PORT || 8081);
 wifi.init({
 	iface :null
 });
@@ -36,12 +28,12 @@ app.get('/getwifis', function (req, res) {
 })
 
 
-var server = app.listen(8081, function () {
+/*var server = app.listen(8081, function () {
    var host = server.address().address
    var port = server.address().port
    
    console.log("Example app listening at http://%s:%s", host, port)
-})
+})*/
 
 
 
